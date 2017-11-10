@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.springboot.demo.test;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -30,8 +30,6 @@ public class EmployeeResourceTest extends SprintBootTests {
 			.andExpect(status().isOk())
 			.andExpect(content().contentType("application/json;charset=UTF-8"))
 			.andExpect(jsonPath("$.name").value("emp1"))
-			.andExpect(jsonPath("$.designation").value("manager"))
-			.andExpect(jsonPath("$.empId").value("1"))
-			.andExpect(jsonPath("$.salary").value("3000.0"));
+			.andExpect(jsonPath("$.dept").value("manager"));
 	}
 }
