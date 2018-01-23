@@ -1,0 +1,8 @@
+server:
+  port: 8444
+pageController:
+  msg: "Hello from application YAML"
+  
+app:
+  name: My cool Application
+  description: ${app.name} is a Spring Boot App

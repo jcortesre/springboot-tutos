@@ -19,11 +19,6 @@ public class SbtutosApplication {
 
 		String[] beans = context.getBeanDefinitionNames();
 		Arrays.sort(beans);
-		System.out.println("----------beans created ----------------" + beans.length);
-		for (String bean : beans) {
-			System.out.println(bean);
-		}
-		System.out.println("----------beans created ----------------");
 		
 		System.out.println(context.getBean("user").toString());
 	}

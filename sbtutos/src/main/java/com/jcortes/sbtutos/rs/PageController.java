@@ -1,6 +1,7 @@
 package com.jcortes.sbtutos.rs;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -9,7 +10,6 @@ import com.abc.foo.NotificationService;
 @RestController
 public class PageController {
 
-	// @Autowired -> property based injection (not testeable at all)
 	private NotificationService service;
 
 	@Autowired // setter based injection
@@ -17,14 +17,22 @@ public class PageController {
 		this.service = service;
 	}
 
-//	@Autowired -> contructor based injection
-	public PageController(NotificationService service) {
-		super();
-		this.service = service;
-	}
+	@Value("${pageController.msg}")
+	private String msg;
+
+	@Value("${my.secret}")
+	private String mySecret;
+
+	@Value("${app.description}")
+	private String appDescription;
 
 	@RequestMapping("/")
 	public String home() {
-		return service.showMessage("Home");
+		return service.showMessage(String.format("%s %s", msg, mySecret));
+	}
+
+	@RequestMapping("/desc")
+	public String description() {
+		return service.showMessage(appDescription);
 	}
 }
