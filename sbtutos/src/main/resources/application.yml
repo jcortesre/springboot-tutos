@@ -6,3 +6,9 @@ pageController:
 app:
   name: My cool Application
   description: ${app.name} is a Spring Boot App
+  
+emailconfig:
+  from: test@test.com
+  to: destiny@dest.com
+  subject: test message
+  content-type: plain text
