@@ -20,6 +20,8 @@ public class SbtutosApplication {
 
 		EmailConfig emailConfig = (EmailConfig) context.getBean("emailConfig");
 		System.out.println(emailConfig.toString());
+
+		System.out.println("datasource: " + context.getBean("dataSource").toString());
 	}
 
 	@Bean

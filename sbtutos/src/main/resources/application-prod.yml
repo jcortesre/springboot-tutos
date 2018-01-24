@@ -1,0 +1,16 @@
+server:
+  port: 8445
+pageController:
+  msg: "Hello from application YAML"
+
+app:
+  name: My cool Application
+  description: ${app.name} is a Spring Boot App [Production ENV]
+  
+emailconfig:
+  from: test-prod@test.com
+  to: destiny-prod@dest.com
+  subject: test message from production ENV
+  content-type: plain text
+  
+

@@ -26,6 +26,9 @@ public class PageController {
 	@Value("${app.description}")
 	private String appDescription;
 
+	@Value("${spring.profiles.active}")
+	private String profile;
+
 	@RequestMapping("/")
 	public String home() {
 		return service.showMessage(String.format("%s %s", msg, mySecret));
@@ -34,5 +37,10 @@ public class PageController {
 	@RequestMapping("/desc")
 	public String description() {
 		return service.showMessage(appDescription);
+	}
+
+	@RequestMapping("/env")
+	public String getEnv() {
+		return "env: " + profile;
 	}
 }

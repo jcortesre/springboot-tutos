@@ -1,8 +1,5 @@
-spring:
-  profiles:
-    active: prod
 server:
-  port: 8443
+  port: 8444
 pageController:
   msg: "Hello from application YAML"
 
@@ -11,10 +8,12 @@ my:
   number: ${random.int}  
 app:
   name: My cool Application
-  description: ${app.name} is a Spring Boot App
+  description: ${app.name} is a Spring Boot App [Delelopment ENV]
   
 emailconfig:
-  from: default@test.com
-  to: default-destiny@dest.com
-  subject: default test message
+  from: test-dev@test.com
+  to: destiny-dev@dest.com
+  subject: test message from development env
   content-type: plain text
+  
+
