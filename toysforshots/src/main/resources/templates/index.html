@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymleaf.org">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -56,11 +56,12 @@
         <hr/>
     </article>
 
-    <footer>
-        <p>Copyright Dan Vega 2015</p>
-    </footer>
+		<footer>
+			<!-- Thymeleaf placeholder to bind messages -->
+			<p th:text="#{copyright}">Default Copyright statement here...</p>
+		</footer>
 
-</div>
+	</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" ></script>
