@@ -10,7 +10,7 @@ public class ExceptionControllerAdvice {
 	@ExceptionHandler(Exception.class)
 	public String exception(Exception exception, Model model){
 		model.addAttribute("exception", exception);
-		return "globalControllerHandler";
+		return "errorHandler";
 	}
 	
 }
