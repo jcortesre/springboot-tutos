@@ -1,6 +1,6 @@
 package com.h2demo.service;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import javax.annotation.PostConstruct;
 
@@ -20,7 +20,7 @@ public class Dataloader {
 	@Autowired
 	private PostRepository postRepository;
 
-	@PostConstruct
+//	@PostConstruct
 	private void loadData() {
 		Author author = new Author("Juanc", "Yepes");
 		authorRepository.save(author);
@@ -28,7 +28,7 @@ public class Dataloader {
 		Post post1 = new Post("Java is the best");
 		post1.setAuthor(author);
 		post1.setBody("post body here");
-		post1.setPostedOn(new Date());
+		post1.setPostedOn(LocalDateTime.now());
 		postRepository.save(post1);
 
 	}

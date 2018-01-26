@@ -15,6 +15,7 @@ public class Author {
 	private Long id;
 	private String firstName;
 	private String lastName;
+	private String email;
 	@OneToMany(mappedBy = "author")
 	private List<Post> posts;
 
@@ -58,6 +59,14 @@ public class Author {
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 }
