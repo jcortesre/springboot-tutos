@@ -12,7 +12,7 @@
 	    <article th:each="post : ${posts}">
 			<header>
 				<h2 th:text="${post.title}">title</h2>
-				<p th:text="${#calendars.format(post.postedOn,'M/dd/yyyy hh:mm:ss a')}">postedOn</p>
+				<p th:text="${post.postedOn}">postedOn</p>
 			</header>
 			<section th:utext="${post.teaser}">
 				teaser

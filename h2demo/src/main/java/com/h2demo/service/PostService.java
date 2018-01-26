@@ -1,5 +1,7 @@
 package com.h2demo.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,5 +16,13 @@ public class PostService {
 
 	public Post findLastPost() {
 		return repository.findFirstByOrderByPostedOnDesc();
+	}
+
+	public List<Post> findAllPosts() {
+		return repository.findAllByOrderByPostedOnDesc();
+	}
+
+	public Post findBySlug(String slug) {
+		return repository.findFirstBySlug(slug);
 	}
 }

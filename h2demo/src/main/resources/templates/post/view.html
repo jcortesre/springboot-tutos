@@ -18,7 +18,7 @@
 	    <article>
 			<header>
 				<h2 th:text="${post.title}">title</h2>
-				<p th:text="${#calendars.format(post.postedOn,'M/dd/yyyy hh:mm a')}">postedOn</p>
+				<p th:text="${post.postedOn}">postedOn</p>
 			</header>
 			<section th:utext="${post.body}">
 				body
