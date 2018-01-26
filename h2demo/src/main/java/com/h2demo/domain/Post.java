@@ -1,7 +1,8 @@
 package com.h2demo.domain;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -14,8 +15,9 @@ public class Post {
 	@GeneratedValue
 	private Long id;
 	private String title;
+	@Column(columnDefinition="TEXT")
 	private String body;
-	private LocalDateTime postedOn;
+	private Date postedOn;
 	// Author
 	@ManyToOne
 	private Author author;
@@ -52,11 +54,11 @@ public class Post {
 		this.id = id;
 	}
 
-	public LocalDateTime getPostedOn() {
+	public Date getPostedOn() {
 		return postedOn;
 	}
 
-	public void setPostedOn(LocalDateTime postedOn) {
+	public void setPostedOn(Date postedOn) {
 		this.postedOn = postedOn;
 	}
 	

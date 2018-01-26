@@ -1,0 +1,3 @@
+insert into author (id, first_name, last_name) values (1, 'Dan', 'Vega');
+insert into post (id, title, body, author_id, posted_on) values (1, 'Spring Boot is aweson', 'blog post content ...',1, CURRENT_DATE());
+insert into post (id, title, body, author_id, posted_on) values (2, 'Spring Data Rocks', 'In this exclusive interview with Jorge Aramburo, CEO and Founder of PSL, a Colombian software development firm, voiced the pressures that his country faces in meeting demand due to a severe lack of talent.',1, CURRENT_DATE());
